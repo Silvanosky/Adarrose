@@ -1,7 +1,0 @@
-graph: { title: "/home/silvanosky/epita/ing3/ada/Adarrose/adarrose/Ada_Drivers_Library/repo/arch/ARM/STM32/svd/stm32f429x/stm32_svd-pwr.ads"
-node: { title: "stm32_svd__pwr__pwr_peripheralIP" label: "PWR_PERIPHERALIP\n/home/silvanosky/epita/ing3/ada/Adarrose/adarrose/Ada_Drivers_Library/repo/arch/ARM/STM32/svd/stm32f429x/stm32_svd-pwr.ads:139:9\n16 bytes (static)" }
-edge: { sourcename: "stm32_svd__pwr__pwr_peripheralIP" targetname: "stm32_svd__pwr__csr_registerIP" label: "/home/silvanosky/epita/ing3/ada/Adarrose/adarrose/Ada_Drivers_Library/repo/arch/ARM/STM32/svd/stm32f429x/stm32_svd-pwr.ads:143:7" }
-edge: { sourcename: "stm32_svd__pwr__pwr_peripheralIP" targetname: "stm32_svd__pwr__cr_registerIP" label: "/home/silvanosky/epita/ing3/ada/Adarrose/adarrose/Ada_Drivers_Library/repo/arch/ARM/STM32/svd/stm32f429x/stm32_svd-pwr.ads:141:7" }
-node: { title: "stm32_svd__pwr__csr_registerIP" label: "CSR_REGISTERIP\n/home/silvanosky/epita/ing3/ada/Adarrose/adarrose/Ada_Drivers_Library/repo/arch/ARM/STM32/svd/stm32f429x/stm32_svd-pwr.ads:84:9\n16 bytes (static)" }
-node: { title: "stm32_svd__pwr__cr_registerIP" label: "CR_REGISTERIP\n/home/silvanosky/epita/ing3/ada/Adarrose/adarrose/Ada_Drivers_Library/repo/arch/ARM/STM32/svd/stm32f429x/stm32_svd-pwr.ads:22:9\n16 bytes (static)" }
-}

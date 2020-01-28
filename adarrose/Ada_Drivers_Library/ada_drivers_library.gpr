@@ -52,6 +52,15 @@ library project Ada_Drivers_Library is
          "-fdata-sections");  -- Create a linker section for each data
    end Compiler;
 
+   package Ide is
+      for Gnat use "arm-eabi-gnat";
+      for Gnatlist use "arm-eabi-gnatls";
+      for Debugger_Command use "arm-eabi-gdb";
+      for Program_Host use "localhost:4242";
+      for Communication_Protocol use "remote";
+      for Connection_Tool use "st-util";
+   end Ide;
+
 
    for Languages use ("Ada");
    for Create_Missing_Dirs use "True";
