@@ -1,0 +1,3 @@
+[submodule "adarrose/Ada_Drivers_Library/repo"]
+	path = adarrose/Ada_Drivers_Library/repo
+	url = https://github.com/AdaCore/Ada_Drivers_Library.git
