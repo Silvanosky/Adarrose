@@ -1,0 +1,10 @@
+graph: { title: "/home/silvanosky/epita/ing3/ada/Adarrose/adarrose/Ada_Drivers_Library/repo/arch/ARM/STM32/svd/stm32f429x/stm32_svd-dbg.ads"
+node: { title: "stm32_svd__dbg__dbg_peripheralIP" label: "DBG_PERIPHERALIP\n/home/silvanosky/epita/ing3/ada/Adarrose/adarrose/Ada_Drivers_Library/repo/arch/ARM/STM32/svd/stm32f429x/stm32_svd-dbg.ads:174:9\n16 bytes (static)" }
+edge: { sourcename: "stm32_svd__dbg__dbg_peripheralIP" targetname: "stm32_svd__dbg__dbgmcu_apb2_fz_registerIP" label: "/home/silvanosky/epita/ing3/ada/Adarrose/adarrose/Ada_Drivers_Library/repo/arch/ARM/STM32/svd/stm32f429x/stm32_svd-dbg.ads:182:7" }
+edge: { sourcename: "stm32_svd__dbg__dbg_peripheralIP" targetname: "stm32_svd__dbg__dbgmcu_apb1_fz_registerIP" label: "/home/silvanosky/epita/ing3/ada/Adarrose/adarrose/Ada_Drivers_Library/repo/arch/ARM/STM32/svd/stm32f429x/stm32_svd-dbg.ads:180:7" }
+edge: { sourcename: "stm32_svd__dbg__dbg_peripheralIP" targetname: "stm32_svd__dbg__dbgmcu_cr_registerIP" label: "/home/silvanosky/epita/ing3/ada/Adarrose/adarrose/Ada_Drivers_Library/repo/arch/ARM/STM32/svd/stm32f429x/stm32_svd-dbg.ads:178:7" }
+node: { title: "stm32_svd__dbg__dbgmcu_apb2_fz_registerIP" label: "DBGMCU_APB2_FZ_REGISTERIP\n/home/silvanosky/epita/ing3/ada/Adarrose/adarrose/Ada_Drivers_Library/repo/arch/ARM/STM32/svd/stm32f429x/stm32_svd-dbg.ads:140:9\n16 bytes (static)" }
+node: { title: "stm32_svd__dbg__dbgmcu_apb1_fz_registerIP" label: "DBGMCU_APB1_FZ_REGISTERIP\n/home/silvanosky/epita/ing3/ada/Adarrose/adarrose/Ada_Drivers_Library/repo/arch/ARM/STM32/svd/stm32f429x/stm32_svd-dbg.ads:71:9\n16 bytes (static)" }
+node: { title: "stm32_svd__dbg__dbgmcu_cr_registerIP" label: "DBGMCU_CR_REGISTERIP\n/home/silvanosky/epita/ing3/ada/Adarrose/adarrose/Ada_Drivers_Library/repo/arch/ARM/STM32/svd/stm32f429x/stm32_svd-dbg.ads:41:9\n16 bytes (static)" }
+node: { title: "stm32_svd__dbg__dbgmcu_idcode_registerIP" label: "DBGMCU_IDCODE_REGISTERIP\n/home/silvanosky/epita/ing3/ada/Adarrose/adarrose/Ada_Drivers_Library/repo/arch/ARM/STM32/svd/stm32f429x/stm32_svd-dbg.ads:21:9\n16 bytes (static)" }
+}

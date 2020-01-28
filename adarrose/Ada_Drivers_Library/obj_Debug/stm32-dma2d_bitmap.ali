@@ -1,0 +1,337 @@
+V "GNAT Lib v2019"
+A -O0
+A -gnatA
+A --RTS=/home/silvanosky/opt/GNAT/2019-arm-elf/arm-eabi/lib/gnat/ravenscar-full-stm32f429disco/
+A -mlittle-endian
+A -mfloat-abi=hard
+A -mcpu=cortex-m4
+A -mfpu=fpv4-sp-d16
+A -mthumb
+A -gnata
+A -fcallgraph-info=su
+A -fcallgraph-info=su
+A -g
+A -gnatwa
+A -gnatw_A
+A -gnatQ
+A -gnatw.X
+A -ffunction-sections
+A -fdata-sections
+P DB SS ZX
+
+RN
+RV NO_DISPATCH
+RV NO_DISPATCHING_CALLS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_UNCHECKED_CONVERSION
+RV NO_DEFAULT_INITIALIZATION
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U stm32.dma2d_bitmap%b	stm32-dma2d_bitmap.adb	576f2025 OO PK IU
+W ada%s			ada.ads			ada.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W ada.unchecked_conversion%s
+W cortex_m%s		cortex_m.ads		cortex_m.ali
+W cortex_m.cache%s	cortex_m-cache.adb	cortex_m-cache.ali
+W stm32%s		stm32.ads		stm32.ali
+W stm32.dma2d%s		stm32-dma2d.adb		stm32-dma2d.ali
+Z system.assertions%s	s-assert.adb		s-assert.ali
+
+U stm32.dma2d_bitmap%s	stm32-dma2d_bitmap.ads	ae46806c BN EE OO PF PK IU
+Z ada.exceptions%s	a-except.adb		a-except.ali
+Z ada.streams%s		a-stream.adb		a-stream.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W hal%s			hal.ads			hal.ali
+W hal.bitmap%s		hal-bitmap.ads		hal-bitmap.ali
+W memory_mapped_bitmap%s  memory_mapped_bitmap.adb  memory_mapped_bitmap.ali
+W stm32%s		stm32.ads		stm32.ali
+W stm32.dma2d%s		stm32-dma2d.adb		stm32-dma2d.ali
+W system%s		system.ads		system.ali
+Z system.finalization_masters%s  s-finmas.adb	s-finmas.ali
+Z system.pool_global%s	s-pooglo.adb		s-pooglo.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.storage_elements%s  s-stoele.adb	s-stoele.ali
+
+D ada.ads		20190518110050 76789da1 ada%s
+D a-except.ads		20190518110050 291912d5 ada.exceptions%s
+D a-finali.ads		20190518110050 bf4f806b ada.finalization%s
+D a-stream.ads		20190518110050 119b8fb3 ada.streams%s
+D a-tags.ads		20190518110049 491b781d ada.tags%s
+D a-unccon.ads		20190518110050 0e9b276f ada.unchecked_conversion%s
+D cortex_m.ads		20200128140954 38b367df cortex_m%s
+D cortex_m-cache.ads	20200128140954 a949d093 cortex_m.cache%s
+D cortex_m-cache.adb	20200128140954 d3f5263e cortex_m.cache%b
+D hal.ads		20200128140954 2b42c80e hal%s
+D hal-bitmap.ads	20200128140954 85a69113 hal.bitmap%s
+D interfac.ads		20190518110050 5ab55268 interfaces%s
+D memory_mapped_bitmap.ads  20200128140954 b0310810 memory_mapped_bitmap%s
+D soft_drawing_bitmap.ads  20200128140954 e11f4ff7 soft_drawing_bitmap%s
+D stm32.ads		20200128140954 698e2c3b stm32%s
+D stm32-dma2d.ads	20200128140954 cec1550a stm32.dma2d%s
+D stm32-dma2d_bitmap.ads  20200128140954 e71d75df stm32.dma2d_bitmap%s
+D stm32-dma2d_bitmap.adb  20200128140954 d961f70c stm32.dma2d_bitmap%b
+D system.ads		20200128141012 db831581 system%s
+D s-assert.ads		20190518110050 cd8d2c94 system.assertions%s
+D s-finmas.ads		20190518110049 7811a767 system.finalization_masters%s
+D s-finroo.ads		20190518110050 4ff27390 system.finalization_root%s
+D s-parame.ads		20190518110050 d106111e system.parameters%s
+D s-pooglo.ads		20190518110049 ede33ef8 system.pool_global%s
+D s-secsta.ads		20190518110050 56a2861c system.secondary_stack%s
+D s-stalib.ads		20190518110050 09bd3940 system.standard_library%s
+D s-stoele.ads		20190518110050 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20190518110050 ed88f8fb system.storage_elements%b
+D s-stopoo.ads		20190518110049 b16154c2 system.storage_pools%s
+D s-stratt.ads		20190518110050 aedef97e system.stream_attributes%s
+D s-traent.ads		20190518110049 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20190518110050 34867c83 system.unsigned_types%s
+G a e
+G c Z s b [set_pixel stm32__dma2d_bitmap 47 25 none]
+G c Z s b [set_pixel_blend stm32__dma2d_bitmap 51 25 none]
+G c Z s b [pixel stm32__dma2d_bitmap 55 24 none]
+G c Z s b [fill stm32__dma2d_bitmap 59 25 none]
+G c Z s b [fill_rect stm32__dma2d_bitmap 62 25 none]
+G c Z s b [copy_rect stm32__dma2d_bitmap 66 25 none]
+G c Z s b [copy_rect stm32__dma2d_bitmap 79 25 none]
+G c Z s b [wait_transfer stm32__dma2d_bitmap 90 14 none]
+G c Z s s [dma2d_bitmap_bufferDA stm32__dma2d_bitmap 43 9 none]
+G c Z s s [dma2d_bitmap_bufferDF stm32__dma2d_bitmap 43 9 none]
+G c Z s s [dma2d_bitmap_bufferIP stm32__dma2d_bitmap 43 9 none]
+G c Z s b [to_dma2d_buffer stm32__dma2d_bitmap 101 13 none]
+G c Z b b [to_dma2d_cm stm32__dma2d_bitmap 39 13 none]
+G c Z b b [to_dma2d_color stm32__dma2d_bitmap 42 13 none]
+G r c none [set_pixel stm32__dma2d_bitmap 47 25 none] [dma2d_wait_transfer stm32__dma2d 272 14 none]
+G r c none [set_pixel stm32__dma2d_bitmap 47 25 none] [set_pixel memory_mapped_bitmap 118 14 none]
+G r s dma2d_buffer [set_pixel_blend stm32__dma2d_bitmap 51 25 none] [dma2d_bufferIP stm32__dma2d 167 9 none]
+G r c none [set_pixel_blend stm32__dma2d_bitmap 51 25 none] [source memory_mapped_bitmap 110 13 none]
+G r c none [set_pixel_blend stm32__dma2d_bitmap 51 25 none] [color_mode memory_mapped_bitmap 90 13 none]
+G r c none [set_pixel_blend stm32__dma2d_bitmap 51 25 none] [set_pixel_blend memory_mapped_bitmap 135 14 none]
+G r c none [set_pixel_blend stm32__dma2d_bitmap 51 25 none] [swapped memory_mapped_bitmap 86 13 none]
+G r c none [set_pixel_blend stm32__dma2d_bitmap 51 25 none] [width memory_mapped_bitmap 78 13 none]
+G r c none [set_pixel_blend stm32__dma2d_bitmap 51 25 none] [dma2d_set_pixel_blend stm32__dma2d 201 14 none]
+G r c none [pixel stm32__dma2d_bitmap 55 24 none] [dma2d_wait_transfer stm32__dma2d 272 14 none]
+G r c none [pixel stm32__dma2d_bitmap 55 24 none] [pixel memory_mapped_bitmap 140 13 none]
+G r c none [fill stm32__dma2d_bitmap 59 25 none] [color_mode memory_mapped_bitmap 90 13 none]
+G r c none [fill stm32__dma2d_bitmap 59 25 none] [fill soft_drawing_bitmap 82 14 none]
+G r s dma2d_buffer [fill stm32__dma2d_bitmap 59 25 none] [dma2d_bufferIP stm32__dma2d 167 9 none]
+G r c none [fill stm32__dma2d_bitmap 59 25 none] [dma2d_fill stm32__dma2d 186 14 none]
+G r s dma2d_buffer [fill_rect stm32__dma2d_bitmap 62 25 none] [dma2d_bufferIP stm32__dma2d 167 9 none]
+G r c none [fill_rect stm32__dma2d_bitmap 62 25 none] [color_mode memory_mapped_bitmap 90 13 none]
+G r c none [fill_rect stm32__dma2d_bitmap 62 25 none] [fill_rect soft_drawing_bitmap 87 14 none]
+G r c none [fill_rect stm32__dma2d_bitmap 62 25 none] [swapped memory_mapped_bitmap 86 13 none]
+G r c none [fill_rect stm32__dma2d_bitmap 62 25 none] [width memory_mapped_bitmap 78 13 none]
+G r c none [fill_rect stm32__dma2d_bitmap 62 25 none] [dma2d_fill_rect stm32__dma2d 208 14 none]
+G r c none [copy_rect stm32__dma2d_bitmap 66 25 none] [color_mode memory_mapped_bitmap 90 13 none]
+G r s dma2d_buffer [copy_rect stm32__dma2d_bitmap 66 25 none] [dma2d_bufferIP stm32__dma2d 167 9 none]
+G r c none [copy_rect stm32__dma2d_bitmap 66 25 none] [swapped memory_mapped_bitmap 86 13 none]
+G r c none [copy_rect stm32__dma2d_bitmap 66 25 none] [width memory_mapped_bitmap 78 13 none]
+G r c none [copy_rect stm32__dma2d_bitmap 66 25 none] [clean_dcache cortex_m__cache 53 14 none]
+G r c none [copy_rect stm32__dma2d_bitmap 66 25 none] [dma2d_copy_rect stm32__dma2d 229 14 none]
+G r c none [copy_rect stm32__dma2d_bitmap 79 25 none] [color_mode memory_mapped_bitmap 90 13 none]
+G r s dma2d_buffer [copy_rect stm32__dma2d_bitmap 79 25 none] [dma2d_bufferIP stm32__dma2d 167 9 none]
+G r c none [copy_rect stm32__dma2d_bitmap 79 25 none] [swapped memory_mapped_bitmap 86 13 none]
+G r c none [copy_rect stm32__dma2d_bitmap 79 25 none] [width memory_mapped_bitmap 78 13 none]
+G r c none [copy_rect stm32__dma2d_bitmap 79 25 none] [clean_dcache cortex_m__cache 53 14 none]
+G r c none [copy_rect stm32__dma2d_bitmap 79 25 none] [dma2d_copy_rect stm32__dma2d 229 14 none]
+G r c none [wait_transfer stm32__dma2d_bitmap 90 14 none] [dma2d_wait_transfer stm32__dma2d 272 14 none]
+G r c none [wait_transfer stm32__dma2d_bitmap 90 14 none] [buffer_size memory_mapped_bitmap 152 13 none]
+G r c none [wait_transfer stm32__dma2d_bitmap 90 14 none] [clean_invalidate_dcache cortex_m__cache 74 14 none]
+G r s memory_mapped_bitmap_buffer [dma2d_bitmap_bufferIP stm32__dma2d_bitmap 43 9 none] [memory_mapped_bitmap_bufferIP memory_mapped_bitmap 41 9 none]
+G r s dma2d_buffer [to_dma2d_buffer stm32__dma2d_bitmap 101 13 none] [dma2d_bufferIP stm32__dma2d 167 9 none]
+X 1 ada.ads
+16K9*Ada 20e8 18|32r6 39r32 42r35
+X 6 a-unccon.ads
+20v14*Unchecked_Conversion 18|32w10 39r36 42r39
+X 7 cortex_m.ads
+32K9*Cortex_M 34e13 18|33r6 33r26 220r7 260r7
+X 8 cortex_m-cache.ads
+37K18*Cache 80e19 18|33w15 33r35 220r16 260r16
+53U14*Clean_DCache 18|220s22
+74U14*Clean_Invalidate_DCache 18|260s22
+75m7 Start{19|80M9} 18|261r10
+76i7 Len{natural} 18|262r10
+X 10 hal.ads
+34K9*HAL 166e8 17|36r6 36r32 67r21 71r21 77r33 77r57 88r33 88r57 97r42 102r16
+. 18|40r7 43r7 50r16 89r26 176r21 180r21
+97M9*UInt32<12|74M9>
+X 11 hal-bitmap.ads
+34K13*Bitmap 432e15 17|36w10 36r36 67r25 71r25 77r37 77r61 88r37 88r61 97r46
+. 102r20 18|40r11 43r11 50r20 89r30 176r25 180r25
+43E9*Bitmap_Color_Mode 56e8 18|40r18
+44n7*ARGB_8888{43E9} 17|77r44 88r44
+48n7*ARGB_4444{43E9} 17|77r68 88r68
+49n7*L_8{43E9} 17|97r53
+67R9*Point 70e14 17|49r16 53r16 57r16 68r21 70r21 72r21 81r21 83r21 18|73r16
+. 86r16 116r16 177r21 179r21 181r21 232r21 234r21
+68i7*X{natural} 18|95r29 102r44 153r40 162r55 190r39 192r39 194r38 201r46
+. 206r46 217r43
+69i7*Y{natural} 18|96r29 101r29 154r40 161r40 191r39 193r39 195r38 200r27
+. 205r27 216r25
+80R9*Rect 84e14 17|64r16 18|144r16
+81r7*Position{67R9} 18|153r31 154r31 161r31 162r46
+82i7*Width{natural} 18|155r31 162r64 164r31
+83i7*Height{natural} 18|156r31 163r31
+86R9*Bitmap_Color 91e15 17|57r30 18|43r18 89r37 116r30
+100h9*Bitmap_Buffer 17|67r32 71r32 80r21 102r27 18|50r27 176r32 180r32 231r21
+104y13*Width{natural} 18|58R30 62R31 201R31 217R29
+108y13*Height{natural} 18|59R31 61R30
+112y13*Swapped{boolean} 18|57R21 199R21 215R23
+129y13*Color_Mode{43E9} 18|53R29
+134y13*Mapped_In_RAM{boolean} 17|103R33
+137y13*Memory_Address{19|80M9} 18|56R26 211R20 220R47
+289y13*Buffer_Size{natural} 18|220R74
+X 12 interfac.ads
+74M9*Unsigned_32
+X 13 memory_mapped_bitmap.ads
+37K9*Memory_Mapped_Bitmap 154e25 17|38w6 38r32
+41R9*Memory_Mapped_Bitmap_Buffer<14|42R9> 73e14 17|42r22
+42m7*Addr{19|80M9} 17|94m21 18|261r26
+44i7*Actual_Width{natural} 17|95m21
+45i7*Actual_Height{natural} 17|96m21
+49e7*Actual_Color_Mode{11|43E9} 17|97m21
+54b7*Currently_Swapped{boolean} 17|98m21
+71m7*Native_Source{10|97M9} 17|99m21 18|132r55 152r33 160r33
+78V13*Width{natural}<11|104p13> 18|102s33 162s33 206s31
+82V13*Height{natural}<11|108p13>
+86V13*Swapped{boolean}<11|112p13> 18|92s24 149s24 204s21
+90V13*Color_Mode{11|43E9}<11|129p13> 17|77s19 88s19 18|91s30 131s30 148s30
+94V13*Mapped_In_RAM{boolean}<11|134p13>
+98V13*Memory_Address{19|80M9}<11|137p13>
+102U14*Set_Source<14|48p14>
+106U14*Set_Source<11|146p14>
+110V13*Source{11|86R9}<14|52p13> 18|89s60
+114V13*Source{10|97M9}<11|155p13>
+118U14*Set_Pixel<11|160p14> 18|77s23
+123U14*Set_Pixel<14|57p14>
+129U14*Set_Pixel<14|63p14>
+135U14*Set_Pixel_Blend<11|177p14> 18|106s26
+140V13*Pixel{11|86R9}<14|69p13> 18|120s30
+146V13*Pixel{10|97M9}<11|187p13>
+152V13*Buffer_Size{natural}<11|289p13> 18|262s26
+X 14 soft_drawing_bitmap.ads
+75U14*Draw_Line<11|193p14>
+82U14*Fill<11|202p14> 18|134s26
+87U14*Fill_Rect<11|206p14> 18|167s26
+115U14*Copy_Rect_Blend<11|231p14>
+125U14*Draw_Vertical_Line<11|240p14>
+131U14*Draw_Horizontal_Line<11|245p14>
+137U14*Draw_Rect<11|250p14>
+144U14*Draw_Rounded_Rect<11|256p14>
+151U14*Fill_Rounded_Rect<11|262p14>
+157U14*Draw_Circle<11|267p14>
+163U14*Fill_Circle<11|272p14>
+169U14*Cubic_Bezier<11|277p14>
+176U14*Bezier<11|283p14>
+X 15 stm32.ads
+39K9*STM32 48e10 17|37r6 40r9 102r55 105r5 18|35r6 35r26 37r14 40r37 43r32
+. 212r24 265r5
+X 16 stm32-dma2d.ads
+35K15*DMA2D 282e16 17|37w12 102r61 18|35w12 35r32 40r43 43r38 212r30
+37R9*DMA2D_Color 42e14 18|43r44
+119E9*DMA2D_Color_Mode 130e11 18|40r49 52r29
+135E12*DMA2D_Dst_Color_Mode{119E9} 18|91r45 131r45 148r45
+167R9*DMA2D_Buffer 178e14 17|102r67 18|50r55 54r13 88r26 146r26 187r30 188r30
+. 189r21
+168m7*Addr{19|80M9} 18|56m11
+169i7*Width{natural} 18|58m14 61m14
+170i7*Height{natural} 18|59m14 62m14
+180r4*Null_Buffer{167R9} 18|212r36
+186U14*DMA2D_Fill 18|132s10
+201U14*DMA2D_Set_Pixel_Blend 18|93s13 99s13
+202r7 Buffer{167R9} 18|94r16 100r16
+203i7 X{integer} 18|95r16 101r16
+203i10 Y{integer} 18|96r16 102r16
+204r7 Color{37R9} 18|97r16 103r16
+208U14*DMA2D_Fill_Rect 18|150s13 158s13
+210m7 Color{10|97M9} 18|152r16 160r16
+211i7 X{integer} 18|153r16 161r16
+212i7 Y{integer} 18|154r16 162r16
+213i7 Width{integer} 18|155r16 163r16
+214i7 Height{integer} 18|156r16 164r16
+229U14*DMA2D_Copy_Rect 18|222s7
+241b7 Synchronous{boolean} 18|227r10
+272U14*DMA2D_Wait_Transfer 18|76s7 119s7 259s7
+X 17 stm32-dma2d_bitmap.ads
+40K15*DMA2D_Bitmap 15|39k9 17|105l11 105e23 18|37b20 265l11 265t23
+42R12*Parent{13|41R9} 43r36 18|77r7 106r10 120r14 134r10 167r10
+43R9*DMA2D_Bitmap_Buffer<13|41R9> 13|78P13 82P13 86P13 90P13 94P13 98P13
+. 102P14 106P14 110P13 114P13 123P14 129P14 146P13 152P13 14|75P14 115P14
+. 125P14 131P14 137P14 144P14 151P14 157P14 163P14 169P14 176P14 17|43e59
+. 45r47 47P25 48r23 51P25 52r23 55P24 56r16 59P25 60r23 62P25 63r23 66P25
+. 69r28 79P25 82r28 90p14 90r38 93r27 18|72r23 85r23 115r16 128r23 143r23
+. 178r28 233r28 256r38
+45P9*Any_DMA2D_Bitmap_Buffer(43R9)
+47U25*Set_Pixel<13|118p14> 48=7 49>7 18|71b25 78l8 78t17
+48r7 Buffer{43R9} 18|72b7 77m15 77r15
+49r7 Pt{11|67R9} 18|73b7 77r34
+51U25*Set_Pixel_Blend<13|135p14> 52=7 53>7 18|84b25 108l8 108t23
+52r7 Buffer{43R9} 18|85b7 88r59 89r53 91r23 92r17 102r26 106m18 106r18
+53r7 Pt{11|67R9} 18|86b7 95r26 96r26 101r26 102r41 106r43
+55V24*Pixel{11|86R9}<13|140p13> 56>7 57>7 18|114b24 121l8 121t13
+56r7 Buffer{43R9} 18|115b7 120r22
+57r7 Pt{11|67R9} 18|116b7 120r37
+59U25*Fill<14|82p14> 60=7 18|127b25 136l8 136t12
+60r7 Buffer{43R9} 18|128b7 131r23 132r39 132r48 134m18 134r18
+62U25*Fill_Rect<14|87p14> 63=7 64>7 18|142b25 169l8 169t17
+63r7 Buffer{43R9} 18|143b7 146r59 148r23 149r17 152r26 160r26 162r26 167m18
+. 167r18
+64r7 Area{11|80R9} 18|144b7 153r26 154r26 155r26 156r26 161r26 162r41 162r59
+. 163r26 164r26 167r37
+66U25*Copy_Rect<14|93p14> 67>7 68>7 69=7 70>7 71>7 72>7 73>7 74>7 75>7 18|175b25
+. 228l8 228t17 240s7
+67c7 Src_Buffer<11|100R9> 18|176b7 187r63 199r10 201r20 220r36 220r63 241r10
+68r7 Src_Pt{11|67R9} 18|177b7 190r32 191r32 200r20 201r39 242r10
+69r7 Dst_Buffer{43R9} 77r8 18|178b7 188r63 204r10 206r20 243r10
+70r7 Dst_Pt{11|67R9} 18|179b7 192r32 193r32 205r20 206r39 244r10
+71c7 Bg_Buffer<11|100R9> 18|180b7 189r54 211r10 215r13 217r19 245r10
+72r7 Bg_Pt{11|67R9} 18|181b7 194r32 195r32 216r19 217r37 246r10
+73i7 Width{natural} 18|182b7 196r32 201r50 206r50 208r15 217r47 247r10
+74i7 Height{natural} 18|183b7 197r32 207r15 248r10
+75b7 Synchronous{boolean} 18|184b7 227r25 249r10
+79U25*Copy_Rect<14|105p14> 80>7 81>7 82=7 83>7 84>7 85>7 86>7 18|230b25 250l8
+. 250t17
+80c7 Src_Buffer<11|100R9> 18|231b7 241r25
+81r7 Src_Pt{11|67R9} 18|232b7 242r25
+82r7 Dst_Buffer{43R9} 88r8 18|233b7 243m25
+83r7 Dst_Pt{11|67R9} 18|234b7 244r25
+84i7 Width{natural} 18|235b7 247r25
+85i7 Height{natural} 18|236b7 248r25
+86b7 Synchronous{boolean} 18|237b7 249r25
+90U14*Wait_Transfer 90>29 18|256b14 263l8 263t21
+90r29 Buffer{43R9} 18|256b29 261r19 262r19
+93r4*Null_Buffer{43R9} 18|245r25
+101V13*To_DMA2D_Buffer{16|167R9} 102>7 18|49b13 65l8 65t23 88s42 132s22 146s42
+. 187s46 188s46 189s37
+102c7 Buffer<11|100R9> 103r26 18|50b7 53r22 56r19 57r14 58r23 59r24 61r23
+. 62r24
+X 18 stm32-dma2d_bitmap.adb
+39V13 To_DMA2D_CM[6|20]{16|119E9} 53s9 91s10 131s10 148s10
+42V13 To_DMA2D_Color[6|20]{16|37R9} 97s26 103s26
+52e7 Color_Mode{16|119E9} 54r27
+54r7 Ret{16|167R9} 56m7 58m10 59m10 61m10 62m10 64r14
+88r7 DMA_Buf{16|167R9} 94r26 100r26
+89r7 Value{11|86R9} 97r42 103r42
+146r7 DMA_Buf{16|167R9} 151r16 159r16
+187r7 DMA_Buf_Src{16|167R9} 223r10
+188r7 DMA_Buf_Dst{16|167R9} 224r10
+189r7 DMA_Buf_Bg{16|167R9} 212m10 225r10
+190i7 X0_Src{natural} 200m10 223r23
+191i7 Y0_Src{natural} 201m10 223r31
+192i7 X0_Dst{natural} 205m10 224r23
+193i7 Y0_Dst{natural} 206m10 224r31
+194i7 X0_Bg{natural} 213m10 216m10 225r22
+195i7 Y0_Bg{natural} 214m10 217m10 225r29
+196i7 W{natural} 207m10 226r10
+197i7 H{natural} 208m10 226r13
+X 19 system.ads
+50K9*System 17|35w6 94r42 18|186r16 211r37 19|164e11
+80M9*Address 18|186r23
+82m4*Null_Address{80M9} 17|94r49 18|211r44
+94V14*"="{boolean} 18|211r35
+

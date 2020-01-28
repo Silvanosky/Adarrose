@@ -1,0 +1,104 @@
+V "GNAT Lib v2019"
+A -O0
+A -gnatA
+A --RTS=/home/silvanosky/opt/GNAT/2019-arm-elf/arm-eabi/lib/gnat/ravenscar-full-stm32f429disco/
+A -mlittle-endian
+A -mfloat-abi=hard
+A -mcpu=cortex-m4
+A -mfpu=fpv4-sp-d16
+A -mthumb
+A -gnata
+A -fcallgraph-info=su
+A -fcallgraph-info=su
+A -g
+A -gnatwa
+A -gnatw_A
+A -gnatQ
+A -gnatw.X
+A -ffunction-sections
+A -fdata-sections
+P DB ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U stm32.rng%b		stm32-rng.adb		93ae2490 NE OO PK IU
+W stm32%s		stm32.ads		stm32.ali
+W stm32_svd%s		stm32_svd.ads		stm32_svd.ali
+W stm32_svd.rcc%s	stm32_svd-rcc.ads	stm32_svd-rcc.ali
+W stm32_svd.rng%s	stm32_svd-rng.ads	stm32_svd-rng.ali
+
+U stm32.rng%s		stm32-rng.ads		8a8e70e5 EE NE OO PK IU
+W stm32%s		stm32.ads		stm32.ali
+
+D hal.ads		20200128140954 2b42c80e hal%s
+D interfac.ads		20190518110050 5ab55268 interfaces%s
+D stm32.ads		20200128140954 698e2c3b stm32%s
+D stm32-rng.ads		20200128140954 e3005cde stm32.rng%s
+D stm32-rng.adb		20200128140954 00ae2304 stm32.rng%b
+D stm32_svd.ads		20200128140954 89b9f11a stm32_svd%s
+D stm32_svd-rcc.ads	20200128140954 03c927c7 stm32_svd.rcc%s
+D stm32_svd-rng.ads	20200128140954 73c97c8d stm32_svd.rng%s
+D system.ads		20200128141012 db831581 system%s
+D s-stoele.ads		20190518110050 2dc34a04 system.storage_elements%s
+D s-unstyp.ads		20190518110050 34867c83 system.unsigned_types%s
+G a e
+G c Z s b [enable_rng stm32__rng 50 14 none]
+G c Z s b [disable_rng stm32__rng 52 14 none]
+G c Z s b [reset_rng stm32__rng 54 14 none]
+G c Z s b [enable_rng_clock stm32__rng 56 14 none]
+G c Z s b [rng_enabled stm32__rng 58 13 none]
+G c Z s b [enable_rng_interrupt stm32__rng 60 14 none]
+G c Z s b [disable_rng_interrupt stm32__rng 62 14 none]
+G c Z s b [rng_interrupt_enabled stm32__rng 64 13 none]
+G c Z s b [rng_data stm32__rng 66 13 none]
+G c Z s b [rng_data_ready stm32__rng 68 13 none]
+G c Z s b [rng_seed_error_status stm32__rng 70 13 none]
+G c Z s b [rng_clock_error_status stm32__rng 72 13 none]
+G c Z s b [clear_rng_seed_error_status stm32__rng 74 14 none]
+G c Z s b [clear_rng_clock_error_status stm32__rng 76 14 none]
+X 1 hal.ads
+97M9*UInt32<2|74M9> 4|66r29 5|121r29
+X 2 interfac.ads
+74M9*Unsigned_32
+X 3 stm32.ads
+39K9*STM32 48e10 4|48r9 78r5 5|45r14 165r5
+X 4 stm32-rng.ads
+48K15*RNG 3|39k9 4|78l11 78e14 5|45b20 165l11 165t14
+50U14*Enable_RNG 5|60b14 63l8 63t18
+52U14*Disable_RNG 5|69b14 72l8 72t19
+54U14*Reset_RNG 5|78b14 83l8 83t17
+56U14*Enable_RNG_Clock 5|51b14 54l8 54t24
+58V13*RNG_Enabled{boolean} 5|89b13
+60U14*Enable_RNG_Interrupt 5|96b14 99l8 99t28
+62U14*Disable_RNG_Interrupt 5|105b14 108l8 108t29
+64V13*RNG_Interrupt_Enabled{boolean} 5|114b13
+66V13*RNG_Data{1|97M9} 5|121b13
+68V13*RNG_Data_Ready{boolean} 5|128b13
+70V13*RNG_Seed_Error_Status{boolean} 5|135b13
+72V13*RNG_Clock_Error_Status{boolean} 5|142b13
+74U14*Clear_RNG_Seed_Error_Status 5|149b14 153l8 153t35
+76U14*Clear_RNG_Clock_Error_Status 5|159b14 163l8 163t36
+X 6 stm32_svd.ads
+10K9*STM32_SVD 5|42r6 42r25 43r6 43r25 6|184e14
+X 7 stm32_svd-rcc.ads
+10K19*RCC 5|42w16 42r35 7|1530e18
+361b7*RNGRST{boolean} 5|81m27 82m27
+670b7*RNGEN{boolean} 5|53m26
+1456r7*AHB2RSTR{355R9} 5|81m18 82m18
+1466r7*AHB2ENR{664R9} 5|53m18
+1527r4*RCC_Periph{1444R9} 5|53m7 81m7 82m7
+X 8 stm32_svd-rng.ads
+10K19*RNG 5|43w16 43r35 8|93e18
+22b7*RNGEN{boolean} 5|62m21 71m21 90r22
+24b7*IE{boolean} 5|98m21 107m21 115r22
+41b7*DRDY{boolean} 5|129r24
+43b7*CECS{boolean} 5|143r22 162m21
+45b7*SECS{boolean} 5|136r22 152m21
+75r7*CR{18R9} 5|62m18 71m18 90r19 98m18 107m18 115r19
+77r7*SR{39R9} 5|129r21 136r19 143r19 152m18 162m18
+79m7*DR{1|97M9} 5|122r21
+90r4*RNG_Periph{73R9} 5|62m7 71m7 90r8 98m7 107m7 115r8 122r10 129r10 136r8
+. 143r8 152m7 162m7
+

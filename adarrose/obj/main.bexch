@@ -1,0 +1,22 @@
+[GENERATED OBJECT FILE]
+b__main.o
+[PROJECT FILES]
+/home/silvanosky/epita/ing3/ada/Adarrose/adarrose/adarrose.gpr
+20200128151507
+/home/silvanosky/epita/ing3/ada/Adarrose/adarrose/Ada_Drivers_Library/ada_drivers_library.gpr
+20200128151059
+[BOUND OBJECT FILES]
+/home/silvanosky/epita/ing3/ada/Adarrose/adarrose/obj/main.o
+[GENERATED SOURCE FILES]
+b__main.ads
+b__main.adb
+b__main.ali
+[RESULTING OPTIONS]
+-L/home/silvanosky/epita/ing3/ada/Adarrose/adarrose/obj/
+-L/home/silvanosky/epita/ing3/ada/Adarrose/adarrose/obj/
+-L/home/silvanosky/epita/ing3/ada/Adarrose/adarrose/Ada_Drivers_Library/obj_lib_Debug/
+-L/home/silvanosky/opt/GNAT/2019-arm-elf/arm-eabi/lib/gnat/ravenscar-full-stm32f429disco/adalib/
+-static
+-static-libgcc
+/home/silvanosky/opt/GNAT/2019-arm-elf/arm-eabi/lib/gnat/ravenscar-full-stm32f429disco/adalib/libgnarl.a
+/home/silvanosky/opt/GNAT/2019-arm-elf/arm-eabi/lib/gnat/ravenscar-full-stm32f429disco/adalib/libgnat.a

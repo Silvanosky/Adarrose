@@ -1,0 +1,38 @@
+edge: { sourcename: "stm32__setup__setup_i2c_master"
+  targetname: "5:stm32__i2c__i2c_port,stm32__i2c__i2c_port"
+  label: "stm32-setup.adb:79:11"
+}
+graph: { title: "/home/silvanosky/epita/ing3/ada/Adarrose/adarrose/Ada_Drivers_Library/repo/arch/ARM/STM32/drivers/stm32-setup.adb"
+node: { title: "stm32__device__reset__7" label: "RESET\n/home/silvanosky/epita/ing3/ada/Adarrose/adarrose/Ada_Drivers_Library/repo/arch/ARM/STM32/devices/stm32f42x/stm32-device.ads:402:14" shape : ellipse }
+node: { title: "ada__real_time__delays__delay_until" label: "Delay_Until\n/home/silvanosky/opt/GNAT/2019-arm-elf/arm-eabi/lib/gnat/ravenscar-full-stm32f429disco/gnat/a-retide.ads:42:14" shape : ellipse }
+node: { title: "ada__real_time__Oadd" label: "+\n/home/silvanosky/opt/GNAT/2019-arm-elf/arm-eabi/lib/gnat/ravenscar-full-stm32f429disco/gnat/a-reatim.ads:72:13" shape : ellipse }
+node: { title: "ada__real_time__milliseconds" label: "Milliseconds\n/home/silvanosky/opt/GNAT/2019-arm-elf/arm-eabi/lib/gnat/ravenscar-full-stm32f429disco/gnat/a-reatim.ads:128:13" shape : ellipse }
+node: { title: "ada__real_time__clock" label: "Clock\n/home/silvanosky/opt/GNAT/2019-arm-elf/arm-eabi/lib/gnat/ravenscar-full-stm32f429disco/gnat/a-reatim.ads:68:13" shape : ellipse }
+node: { title: "stm32__device__enable_clock__8" label: "ENABLE_CLOCK\n/home/silvanosky/epita/ing3/ada/Adarrose/adarrose/Ada_Drivers_Library/repo/arch/ARM/STM32/devices/stm32f42x/stm32-device.ads:399:14" shape : ellipse }
+node: { title: "stm32__gpio__lock__2" label: "LOCK\n/home/silvanosky/epita/ing3/ada/Adarrose/adarrose/Ada_Drivers_Library/repo/arch/ARM/STM32/drivers/stm32-gpio.ads:263:14" shape : ellipse }
+node: { title: "stm32__gpio__configure_io" label: "CONFIGURE_IO\n/home/silvanosky/epita/ing3/ada/Adarrose/adarrose/Ada_Drivers_Library/repo/arch/ARM/STM32/drivers/stm32-gpio.ads:207:14" shape : ellipse }
+node: { title: "stm32__device__enable_clock__3" label: "ENABLE_CLOCK\n/home/silvanosky/epita/ing3/ada/Adarrose/adarrose/Ada_Drivers_Library/repo/arch/ARM/STM32/devices/stm32f42x/stm32-device.ads:74:14" shape : ellipse }
+node: { title: "stm32__gpio___assign" label: "GPIO\n/home/silvanosky/epita/ing3/ada/Adarrose/adarrose/Ada_Drivers_Library/repo/arch/ARM/STM32/drivers/stm32-gpio.ads:138:9" shape : ellipse }
+node: { title: "stm32__gpio__gpio_pointsIP" label: "GPIO_POINTSIP\n/home/silvanosky/epita/ing3/ada/Adarrose/adarrose/Ada_Drivers_Library/repo/arch/ARM/STM32/drivers/stm32-gpio.ads:232:9" shape : ellipse }
+node: { title: "stm32__i2c__i2c_configurationIP" label: "I2C_CONFIGURATIONIP\n/home/silvanosky/epita/ing3/ada/Adarrose/adarrose/Ada_Drivers_Library/repo/arch/ARM/STM32/drivers/i2c_stm32f4/stm32-i2c.ads:68:9" shape : ellipse }
+node: { title: "stm32__setup__setup_i2c_master" label: "SETUP_I2C_MASTER\n/home/silvanosky/epita/ing3/ada/Adarrose/adarrose/Ada_Drivers_Library/repo/arch/ARM/STM32/drivers/stm32-setup.adb:41:4\n144 bytes (static)" }
+edge: { sourcename: "stm32__setup__setup_i2c_master" targetname: "__indirect_call" label: "/home/silvanosky/epita/ing3/ada/Adarrose/adarrose/Ada_Drivers_Library/repo/arch/ARM/STM32/drivers/stm32-setup.adb:79:11" }
+node: { title: "__indirect_call" label: "Indirect Call Placeholder" shape : ellipse }
+edge: { sourcename: "stm32__setup__setup_i2c_master" targetname: "stm32__device__reset__7" label: "/home/silvanosky/epita/ing3/ada/Adarrose/adarrose/Ada_Drivers_Library/repo/arch/ARM/STM32/drivers/stm32-setup.adb:69:7" }
+edge: { sourcename: "stm32__setup__setup_i2c_master" targetname: "ada__real_time__delays__delay_until" label: "/home/silvanosky/epita/ing3/ada/Adarrose/adarrose/Ada_Drivers_Library/repo/arch/ARM/STM32/drivers/stm32-setup.adb:68:7" }
+edge: { sourcename: "stm32__setup__setup_i2c_master" targetname: "ada__real_time__Oadd" label: "/home/silvanosky/epita/ing3/ada/Adarrose/adarrose/Ada_Drivers_Library/repo/arch/ARM/STM32/drivers/stm32-setup.adb:68:25" }
+edge: { sourcename: "stm32__setup__setup_i2c_master" targetname: "ada__real_time__milliseconds" label: "/home/silvanosky/epita/ing3/ada/Adarrose/adarrose/Ada_Drivers_Library/repo/arch/ARM/STM32/drivers/stm32-setup.adb:68:27" }
+edge: { sourcename: "stm32__setup__setup_i2c_master" targetname: "ada__real_time__clock" label: "/home/silvanosky/epita/ing3/ada/Adarrose/adarrose/Ada_Drivers_Library/repo/arch/ARM/STM32/drivers/stm32-setup.adb:68:19" }
+edge: { sourcename: "stm32__setup__setup_i2c_master" targetname: "stm32__device__enable_clock__8" label: "/home/silvanosky/epita/ing3/ada/Adarrose/adarrose/Ada_Drivers_Library/repo/arch/ARM/STM32/drivers/stm32-setup.adb:67:7" }
+edge: { sourcename: "stm32__setup__setup_i2c_master" targetname: "stm32__gpio__lock__2" label: "/home/silvanosky/epita/ing3/ada/Adarrose/adarrose/Ada_Drivers_Library/repo/arch/ARM/STM32/drivers/stm32-setup.adb:63:7" }
+edge: { sourcename: "stm32__setup__setup_i2c_master" targetname: "stm32__gpio___assign" label: "/home/silvanosky/epita/ing3/ada/Adarrose/adarrose/Ada_Drivers_Library/repo/arch/ARM/STM32/drivers/stm32-setup.adb:63:17" }
+edge: { sourcename: "stm32__setup__setup_i2c_master" targetname: "stm32__gpio___assign" label: "/home/silvanosky/epita/ing3/ada/Adarrose/adarrose/Ada_Drivers_Library/repo/arch/ARM/STM32/drivers/stm32-setup.adb:63:17" }
+edge: { sourcename: "stm32__setup__setup_i2c_master" targetname: "stm32__gpio__gpio_pointsIP" label: "/home/silvanosky/epita/ing3/ada/Adarrose/adarrose/Ada_Drivers_Library/repo/arch/ARM/STM32/drivers/stm32-setup.adb:63:17" }
+edge: { sourcename: "stm32__setup__setup_i2c_master" targetname: "stm32__gpio__configure_io" label: "/home/silvanosky/epita/ing3/ada/Adarrose/adarrose/Ada_Drivers_Library/repo/arch/ARM/STM32/drivers/stm32-setup.adb:57:7" }
+edge: { sourcename: "stm32__setup__setup_i2c_master" targetname: "stm32__gpio__configure_io" label: "/home/silvanosky/epita/ing3/ada/Adarrose/adarrose/Ada_Drivers_Library/repo/arch/ARM/STM32/drivers/stm32-setup.adb:51:7" }
+edge: { sourcename: "stm32__setup__setup_i2c_master" targetname: "stm32__device__enable_clock__3" label: "/home/silvanosky/epita/ing3/ada/Adarrose/adarrose/Ada_Drivers_Library/repo/arch/ARM/STM32/drivers/stm32-setup.adb:49:7" }
+edge: { sourcename: "stm32__setup__setup_i2c_master" targetname: "stm32__gpio___assign" label: "/home/silvanosky/epita/ing3/ada/Adarrose/adarrose/Ada_Drivers_Library/repo/arch/ARM/STM32/drivers/stm32-setup.adb:49:25" }
+edge: { sourcename: "stm32__setup__setup_i2c_master" targetname: "stm32__gpio___assign" label: "/home/silvanosky/epita/ing3/ada/Adarrose/adarrose/Ada_Drivers_Library/repo/arch/ARM/STM32/drivers/stm32-setup.adb:49:25" }
+edge: { sourcename: "stm32__setup__setup_i2c_master" targetname: "stm32__gpio__gpio_pointsIP" label: "/home/silvanosky/epita/ing3/ada/Adarrose/adarrose/Ada_Drivers_Library/repo/arch/ARM/STM32/drivers/stm32-setup.adb:49:25" }
+edge: { sourcename: "stm32__setup__setup_i2c_master" targetname: "stm32__i2c__i2c_configurationIP" label: "/home/silvanosky/epita/ing3/ada/Adarrose/adarrose/Ada_Drivers_Library/repo/arch/ARM/STM32/drivers/stm32-setup.adb:46:7" }
+}

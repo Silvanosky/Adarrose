@@ -1,0 +1,153 @@
+V "GNAT Lib v2019"
+A -O0
+A -gnatA
+A --RTS=/home/silvanosky/opt/GNAT/2019-arm-elf/arm-eabi/lib/gnat/ravenscar-full-stm32f429disco/
+A -mlittle-endian
+A -mfloat-abi=hard
+A -mcpu=cortex-m4
+A -mfpu=fpv4-sp-d16
+A -mthumb
+A -gnata
+A -fcallgraph-info=su
+A -fcallgraph-info=su
+A -g
+A -gnatwa
+A -gnatw_A
+A -gnatQ
+A -gnatw.X
+A -ffunction-sections
+A -fdata-sections
+P DB ZX
+
+RN
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_IMPLEMENTATION_ATTRIBUTES
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLEMENTATION_RESTRICTIONS
+RV NO_IMPLICIT_LOOPS
+RR NO_ELABORATION_CODE
+RV SPARK_05
+
+U stm32_svd.syscfg%s	stm32_svd-syscfg.ads	3096f473 NE OO PR PK IU
+W hal%s			hal.ads			hal.ali
+W stm32_svd%s		stm32_svd.ads		stm32_svd.ali
+W system%s		system.ads		system.ali
+Z system.unsigned_types%s  s-unstyp.ads		s-unstyp.ali
+
+D hal.ads		20200128140954 2b42c80e hal%s
+D interfac.ads		20190518110050 5ab55268 interfaces%s
+D stm32_svd.ads		20200128140954 89b9f11a stm32_svd%s
+D stm32_svd-syscfg.ads	20200128140954 49eed8e6 stm32_svd.syscfg%s
+D system.ads		20200128141012 db831581 system%s
+D s-unstyp.ads		20190518110050 34867c83 system.unsigned_types%s
+G a e
+G c Z s s [memrm_registerIP stm32_svd__syscfg 21 9 none]
+G c Z s s [pmc_registerIP stm32_svd__syscfg 48 9 none]
+G c Z s s [Texticr1_exti_field_arrayBIP stm32_svd__syscfg 81 4 none]
+G c Z s s [exticr1_exti_fieldIP stm32_svd__syscfg 85 9 none]
+G c Z s s [exticr1_registerIP stm32_svd__syscfg 105 9 none]
+G c Z s s [Texticr2_exti_field_arrayBIP stm32_svd__syscfg 124 4 none]
+G c Z s s [exticr2_exti_fieldIP stm32_svd__syscfg 128 9 none]
+G c Z s s [exticr2_registerIP stm32_svd__syscfg 148 9 none]
+G c Z s s [Texticr3_exti_field_arrayBIP stm32_svd__syscfg 167 4 none]
+G c Z s s [exticr3_exti_fieldIP stm32_svd__syscfg 171 9 none]
+G c Z s s [exticr3_registerIP stm32_svd__syscfg 191 9 none]
+G c Z s s [Texticr4_exti_field_arrayBIP stm32_svd__syscfg 210 4 none]
+G c Z s s [exticr4_exti_fieldIP stm32_svd__syscfg 214 9 none]
+G c Z s s [exticr4_registerIP stm32_svd__syscfg 234 9 none]
+G c Z s s [cmpcr_registerIP stm32_svd__syscfg 250 9 none]
+G c Z s s [syscfg_peripheralIP stm32_svd__syscfg 275 9 none]
+X 1 hal.ads
+34K9*HAL 166e8 4|7w6 17r36 18r35 25r24 29r24 33r24 50r24 58r24 62r24 78r36
+. 91r19 110r24 121r36 134r19 153r24 164r36 177r19 196r24 207r36 220r19 239r24
+. 254r23 258r23
+37M9*Bit 4|29r28
+39M9*UInt2 4|18r39
+41M9*UInt3 4|17r40
+43M9*UInt4 4|58r28 78r40 121r40 164r40 207r40
+45M9*UInt5 4|25r28
+49M9*UInt7 4|254r27
+53M9*UInt8<2|63M9> 4|62r28
+66M9*UInt16<2|66M9> 4|50r28 91r23 110r28 134r23 153r28 177r23 196r28 220r23
+. 239r28
+73M9*UInt20 4|33r28
+79M9*UInt23 4|258r27
+X 2 interfac.ads
+63M9*Unsigned_8
+66M9*Unsigned_16
+X 3 stm32_svd.ads
+10K9*STM32_SVD 184e14 4|10r9 307r5
+X 4 stm32_svd-syscfg.ads
+10K19*SYSCFG 3|10k9 4|307l15 307e21
+17M12*MEMRM_MEM_MODE_Field{1|41M9} 23r24
+18M12*MEMRM_SWP_FMC_Field{1|39M9} 31r24
+21R9*MEMRM_Register 35e6 38r8 277r25
+23m7*MEM_MODE{17M12} 39r7
+25m7*Reserved_3_7{1|45M9} 40r7
+27b7*FB_MODE{boolean} 41r7
+29m7*Reserved_9_9{1|37M9} 42r7
+31m7*SWP_FMC{18M12} 43r7
+33m7*Reserved_12_31{1|73M9} 44r7
+48R9*PMC_Register 64e6 67r8 279r25
+50m7*Reserved_0_15{1|66M9} 68r7
+52b7*ADC1DC2{boolean} 69r7
+54b7*ADC2DC2{boolean} 70r7
+56b7*ADC3DC2{boolean} 71r7
+58m7*Reserved_19_22{1|43M9} 72r7
+60b7*MII_RMII_SEL{boolean} 73r7
+62m7*Reserved_24_31{1|53M9} 74r7
+78M12*EXTICR1_EXTI_Element{1|43M9} 81r55
+81A9*EXTICR1_EXTI_Field_Array(78M12)<integer> 94r19
+85R9*EXTICR1_EXTI_Field 86d7 97e6 99r8 107r24
+86b7*As_Array{boolean} 88r12 108m26
+91m13*Val{1|66M9} 100r7 108m45
+94a13*Arr{81A9} 101r7
+105R9*EXTICR1_Register 112e6 115r8 281r25
+107r7*EXTI{85R9} 116r7
+110m7*Reserved_16_31{1|66M9} 117r7
+121M12*EXTICR2_EXTI_Element{1|43M9} 124r55
+124A9*EXTICR2_EXTI_Field_Array(121M12)<integer> 137r19
+128R9*EXTICR2_EXTI_Field 129d7 140e6 142r8 150r24
+129b7*As_Array{boolean} 131r12 151m26
+134m13*Val{1|66M9} 143r7 151m45
+137a13*Arr{124A9} 144r7
+148R9*EXTICR2_Register 155e6 158r8 283r25
+150r7*EXTI{128R9} 159r7
+153m7*Reserved_16_31{1|66M9} 160r7
+164M12*EXTICR3_EXTI_Element{1|43M9} 167r56
+167A9*EXTICR3_EXTI_Field_Array(164M12)<integer> 180r19
+171R9*EXTICR3_EXTI_Field 172d7 183e6 185r8 193r24
+172b7*As_Array{boolean} 174r12 194m26
+177m13*Val{1|66M9} 186r7 194m45
+180a13*Arr{167A9} 187r7
+191R9*EXTICR3_Register 198e6 201r8 285r25
+193r7*EXTI{171R9} 202r7
+196m7*Reserved_16_31{1|66M9} 203r7
+207M12*EXTICR4_EXTI_Element{1|43M9} 210r57
+210A9*EXTICR4_EXTI_Field_Array(207M12)<integer> 223r19
+214R9*EXTICR4_EXTI_Field 215d7 226e6 228r8 236r24
+215b7*As_Array{boolean} 217r12 237m26
+220m13*Val{1|66M9} 229r7 237m45
+223a13*Arr{210A9} 230r7
+234R9*EXTICR4_Register 241e6 244r8 287r25
+236r7*EXTI{214R9} 245r7
+239m7*Reserved_16_31{1|66M9} 246r7
+250R9*CMPCR_Register 260e6 263r8 289r25
+252b7*CMP_PD{boolean} 264r7
+254m7*Reserved_1_7{1|49M9} 265r7
+256b7*READY{boolean} 266r7
+258m7*Reserved_9_31{1|79M9} 267r7
+275R9*SYSCFG_Peripheral 291e6 293r8 304r28
+277r7*MEMRM{21R9} 294r7
+279r7*PMC{48R9} 295r7
+281r7*EXTICR1{105R9} 296r7
+283r7*EXTICR2{148R9} 297r7
+285r7*EXTICR3{191R9} 298r7
+287r7*EXTICR4{234R9} 299r7
+289r7*CMPCR{250R9} 300r7
+304r4*SYSCFG_Periph{275R9}
+X 5 system.ads
+50K9*System 4|8w6 36r24 65r24 113r24 156r24 199r24 242r24 261r24 305r30 5|164e11
+80M9*Address 4|305r30
+104n41*Low_Order_First{104E9} 4|36r31 65r31 113r31 156r31 199r31 242r31 261r31
+

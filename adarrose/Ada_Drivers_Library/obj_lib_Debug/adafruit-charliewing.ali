@@ -1,0 +1,116 @@
+V "GNAT Lib v2019"
+A -O0
+A -gnatA
+A --RTS=/home/silvanosky/opt/GNAT/2019-arm-elf/arm-eabi/lib/gnat/ravenscar-full-stm32f429disco/
+A -mlittle-endian
+A -mfloat-abi=hard
+A -mcpu=cortex-m4
+A -mfpu=fpv4-sp-d16
+A -mthumb
+A -gnata
+A -fcallgraph-info=su
+A -fcallgraph-info=su
+A -g
+A -gnatwa
+A -gnatw_A
+A -gnatQ
+A -gnatw.X
+A -ffunction-sections
+A -fdata-sections
+P DB ZX
+
+RN
+RV NO_DISPATCHING_CALLS
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U adafruit.charliewing%b  adafruit-charliewing.adb  351481cf OO PK
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W adafruit%s		adafruit.ads		adafruit.ali
+Z system%s		system.ads		system.ali
+Z system.assertions%s	s-assert.adb		s-assert.ali
+
+U adafruit.charliewing%s  adafruit-charliewing.ads  9ec66ecf EE OO PF PK
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W adafruit%s		adafruit.ads		adafruit.ali
+W hal%s			hal.ads			hal.ali
+W hal.i2c%s		hal-i2c.ads		hal-i2c.ali
+W is31fl3731%s		is31fl3731.adb		is31fl3731.ali
+Z system%s		system.ads		system.ali
+Z system.storage_elements%s  s-stoele.adb	s-stoele.ali
+
+D ada.ads		20190518110050 76789da1 ada%s
+D a-except.ads		20190518110050 291912d5 ada.exceptions%s
+D a-finali.ads		20190518110050 bf4f806b ada.finalization%s
+D a-stream.ads		20190518110050 119b8fb3 ada.streams%s
+D a-tags.ads		20190518110049 491b781d ada.tags%s
+D a-unccon.ads		20190518110050 0e9b276f ada.unchecked_conversion%s
+D adafruit.ads		20200128140954 deca3367 adafruit%s
+D adafruit-charliewing.ads  20200128140954 9bfff33a adafruit.charliewing%s
+D adafruit-charliewing.adb  20200128140954 aeeb72f5 adafruit.charliewing%b
+D hal.ads		20200128140954 2b42c80e hal%s
+D hal-i2c.ads		20200128140954 0ed73138 hal.i2c%s
+D interfac.ads		20190518110050 5ab55268 interfaces%s
+D is31fl3731.ads	20200128140954 fe6657a4 is31fl3731%s
+D system.ads		20200128141012 db831581 system%s
+D s-assert.ads		20190518110050 cd8d2c94 system.assertions%s
+D s-finmas.ads		20190518110049 7811a767 system.finalization_masters%s
+D s-finroo.ads		20190518110050 4ff27390 system.finalization_root%s
+D s-parame.ads		20190518110050 d106111e system.parameters%s
+D s-pooglo.ads		20190518110049 ede33ef8 system.pool_global%s
+D s-stalib.ads		20190518110050 09bd3940 system.standard_library%s
+D s-stoele.ads		20190518110050 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20190518110050 ed88f8fb system.storage_elements%b
+D s-stopoo.ads		20190518110049 b16154c2 system.storage_pools%s
+D s-traent.ads		20190518110049 005bf670 system.traceback_entries%s
+G a e
+G c Z s b [led_address adafruit__charliewing 52 13 none]
+G c Z s s [deviceDF adafruit__charliewing 62 9 none]
+G c Z s s [deviceIP adafruit__charliewing 62 9 none]
+G r s device [deviceIP adafruit__charliewing 62 9 none] [deviceIP is31fl3731 119 9 none]
+X 7 adafruit.ads
+33K9*AdaFruit 34e13 8|40r9 68r5 9|32r14 57r5
+X 8 adafruit-charliewing.ads
+40K18*CharlieWing 7|33k9 8|62E9 68l14 68e25 9|32b23 57l14 57t25
+42I12*X_Coord{13|44I12} 56r23
+43I12*Y_Coord{13|45I12} 56r45
+45R9*Device<13|39R9> 46d7 47d7 52P13 52r33 62c9 66e20 9|39r33 13|50p14 53p14
+. 57p14 61p14 66p14 69p14 74p14 79p14 85p14 90p14 95p14
+46p7*Port{11|50P9} 63r7 65r30
+47m7*AD{10|39M9} 64r7 65r36
+52V13*LED_Address{13|102I9}<13|106p13> 52>26 53>26 54>26 9|39b13 55l8 55t19
+52r26 This{45R9} 9|39b26 44r28
+53i26 X{13|44I12} 56r18 9|40b26 45r23
+54i26 Y{13|45I12} 56r40 9|41b26 46r23
+X 9 adafruit-charliewing.adb
+45i7 X2{natural} 48r10 49m13 49r24 54r33
+46i7 Y2{natural} 50m13 50r19 52m10 52r20 54r43
+X 10 hal.ads
+34K9*HAL 8|35w6 36r6 46r23 47r14 63r23 64r14 10|166e8
+39M9*UInt2 8|47r18 64r18
+X 11 hal-i2c.ads
+32K13*I2C 8|36w10 46r27 63r27 11|84e12
+48h9*I2C_Port
+50P9*Any_I2C_Port(48R9) 8|46r31 63r31
+X 13 is31fl3731.ads
+37K9*IS31FL3731 8|38w6 42r23 43r23 48r11 53r33 54r33 55r33 65r11 9|40r33
+. 41r33 42r33 54r14 13|134e15
+39H9*Device 8|48r22 65r22 13|132e14
+44I12*X_Coord{natural} 8|42r34 53r44 9|40r44
+45I12*Y_Coord{natural} 8|43r34 54r44 9|41r44
+50U14*Initialize
+53U14*Display_Frame
+57U14*Select_Frame
+61U14*Fill
+66U14*Clear
+69U14*Enable
+74U14*Disable
+79U14*Set_Brightness
+85U14*Enable_Blink
+90U14*Disable_Blink
+95U14*Set_Blink_Rate
+102I9*LED_Id<short_integer> 8|55r44 9|42r44 54r25
+
