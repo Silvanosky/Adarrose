@@ -21,9 +21,7 @@ is
       Display.Hidden_Buffer (1).Fill;
 
       LCD_Std_Out.Clear_Screen;
-      LCD_Std_Out.Put_Line ("Touch the screen to draw or");
-      LCD_Std_Out.Put_Line ("press the blue button for");
-      LCD_Std_Out.Put_Line ("a demo of drawing primitives.");
+      LCD_Std_Out.Put_Line ("Adarrose");
 
       Display.Update_Layer (1, Copy_Back => True);
    end Clear;
