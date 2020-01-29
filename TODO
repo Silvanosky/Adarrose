@@ -1,0 +1,34 @@
+HLR :
+
+[] Capacité reservoir
+[] Verifier que l'humidité augmente
+[] Seuil d'humidité pour la plante
+[] Warning si variation humidité anormale
+[] Calculer quantité d'eau en fonction du debit de la pompe, tuyau
+[] Heure d'arrosage et verification
+[] Warning trop d'eau
+[] Modes de fonctionnement :
+    - Continu
+    - Plannifié
+    - Ponctuel (on/off)
+[] Check lumiere
+[] Arrosage economique (dependant de la lumiere)
+[] (Relevé d'humidité -> retour utilisateur graph)
+
+LLR :
+
+[] Capacité reservoir -> default value en L
+[] Verifier que l'humidité augmente
+    -> Si pompe on -> humidité augmente ? Y(OK) N(ERROR)
+[] Seuil d'humidité pour la plante -> Trop faible -> Arroser
+[] Warning si variation humidité anormale
+    -> Descente forte (fuite, chaleur, plus d'eau, pompe cassé, trop de drainage) Erreur
+    -> Descente faible (plante malade ?) Erreur
+[] Compute -> Taille tuyau, debit pompe, humidité terre
+[] Heure d'arrosage
+    -> Mode continu : check seuil
+    -> Mode plannifié : check heure && check seuil
+    -> Mode ponctuel : check seuil et message done
+[] Check lumiere -> Mode plannifié et continu uniquement -> Moyenne journé warning si pas assez
+[] Arrosage economique  -> Mode plannifié et continu uniquement -> Si lumiere < X et seuil arroser
+[] (Relevé) -> Mode plannifié et continu uniquement -> Sauvegarde des donnés, Si disponibles, afficher courbe
