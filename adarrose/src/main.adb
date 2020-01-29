@@ -5,6 +5,10 @@ with STM32.User_Button;     use STM32;
 with BMP_Fonts;
 with LCD_Std_Out;
 
+with plants; use plants;
+with types; use types;
+with utils; use utils;
+
 procedure Main
 is
    BG : constant Bitmap_Color := (Alpha => 255, others => 64);
