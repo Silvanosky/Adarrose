@@ -1,4 +1,6 @@
 Ada_Drivers_Library/obj_Debug
 Ada_Drivers_Library/obj_lib_Debug
+obj/
+
 main
 main.bin
