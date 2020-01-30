@@ -5,9 +5,9 @@ with STM32.User_Button;     use STM32;
 with BMP_Fonts;
 with LCD_Std_Out;
 
-with plants; use plants;
-with types; use types;
-with utils; use utils;
+with Configs; use Configs;
+with Plants; use Plants;
+with Types; use Types;
 
 procedure Main
 is

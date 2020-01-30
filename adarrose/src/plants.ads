@@ -1,11 +1,12 @@
-with types; use types;
+with Types; use Types;
 
-package plants is
+package Plants is
 
-   type plant is record
+   type Plant is record
       Threshold : Humidity;
+      Container : Volume;
    end record;
 
-   function compute_water (p : plant) return Water;
+   function Compute_Water (Self : Plant; h : Humidity) return Volume;
 
-end plants;
+end Plants;
