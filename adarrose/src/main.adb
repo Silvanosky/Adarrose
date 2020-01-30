@@ -6,7 +6,10 @@ with BMP_Fonts;
 with LCD_Std_Out;
 
 with Configs; use Configs;
+with Decisions; use Decisions;
+With Errors; use Errors;
 with Plants; use Plants;
+with Sensors; use Sensors;
 with Types; use Types;
 
 procedure Main

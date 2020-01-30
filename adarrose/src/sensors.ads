@@ -2,7 +2,7 @@ with Types; use Types;
 
 package Sensors is
 
-   h : Humidity := 0;
-   l : Brightness := 0;
+   H : Humidity := 0;
+   L : Brightness := 0;
 
 end Sensors;
