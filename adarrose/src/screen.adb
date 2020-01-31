@@ -59,7 +59,8 @@ is
 	end Init;
 
 	procedure Print is
-		Time : Integer := 0;
+		T : Integer := 0;
+	    Err : String := Errors.Get_Message.ALL;
 	begin
 
 		declare
@@ -79,11 +80,13 @@ is
 
 		end;
 		if Current_Mode = Board_Mode then
+		LCD_Std_Out.Set_Font (BMP_Fonts.Font16x24);
 			LCD_Std_Out.Put (0, 30, "Humidity: "& Sensors.H'Img & " %     ");
 			LCD_Std_Out.Put (0, 60, "Light: " & Sensors.L'Img & " %     ");
-			Time := Logger.Light_Time / Seconds(60);
-			LCD_Std_Out.Put (0, 90, "Light Time: " & Time'Img & " Min     ");
-			LCD_Std_Out.Put (0, 130, "Status: " & Errors.Message & "      ");
+			T := Logger.Light_Time / Seconds(60);
+			LCD_Std_Out.Put (0, 90, "Light Time: " & T'Img & " Min     ");
+			LCD_Std_Out.Set_Font (BMP_Fonts.Font8x8);
+			LCD_Std_Out.Put (0, 130, "Status: " & Err & "      ");
 
 			--Display.Update_Layer (1, Copy_Back => False);
 		else
