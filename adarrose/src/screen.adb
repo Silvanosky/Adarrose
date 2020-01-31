@@ -80,7 +80,7 @@ is
 
 		end;
 		if Current_Mode = Board_Mode then
-		LCD_Std_Out.Set_Font (BMP_Fonts.Font16x24);
+			LCD_Std_Out.Set_Font (BMP_Fonts.Font16x24);
 			LCD_Std_Out.Put (0, 30, "Humidity: "& Sensors.H'Img & " %     ");
 			LCD_Std_Out.Put (0, 60, "Light: " & Sensors.L'Img & " %     ");
 			T := Logger.Light_Time / Seconds(60);
