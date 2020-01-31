@@ -91,7 +91,8 @@ package body Sensors is
 	   end if;
    end Positive;
 
-   procedure Update is
+   procedure Update
+   is
    begin
        --Get Humidity sensor
 	   Start_Conversion (ADC1);

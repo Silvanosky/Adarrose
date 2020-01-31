@@ -12,6 +12,8 @@ with Logger;
 with Ada.Real_Time; use Ada.Real_Time;
 
 procedure Main
+with
+	Pre => Configs.Tank > 10.0
 is
 
 begin
