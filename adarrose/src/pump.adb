@@ -13,12 +13,12 @@ package body Pump is
 	begin
 		Enable_Clock (Pin_Pump);
 
-      Configure_IO
-        (Pin_Pump,
-         (Mode        => Mode_Out,
-          Output_Type => Open_Drain,
-          Speed       => Speed_100MHz,
-          Resistors   => Floating));
+		Configure_IO
+			(Pin_Pump,
+			(Mode        => Mode_Out,
+			Output_Type => Open_Drain,
+			Speed       => Speed_100MHz,
+			Resistors   => Floating));
 		Set(Pin_Pump);
 
 	end Init;
