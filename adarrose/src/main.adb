@@ -23,8 +23,8 @@ begin
 		Sensors.Update;
 		delay until Clock + Milliseconds(10);
 		Logger.Update;
-
-		Screen.Print;
+                Screen.Print;
+                Decision(Pipe, Sensors.H, Sensors.L, Light, Plant_Pot, Configs.Pump, Schedule);
 
 		delay until Clock + Milliseconds(200);
 	end loop;

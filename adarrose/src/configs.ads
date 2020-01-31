@@ -13,5 +13,7 @@ package Configs is
    Schedule : Scheduler;-- := (Start => 12, Stop => 16);
    Pipe : Cylinder := (L => Length(10), D => Length(1));
    Light : constant Brightness := 10;
+   Light_Time_Min : constant Time_Span := Seconds(4 * 3600);
+   -- Time_Global : constant Time := Time_Of(2020, 01, 31);
 
 end Configs;

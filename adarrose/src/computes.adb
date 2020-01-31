@@ -1,4 +1,5 @@
 with Ada.Numerics; use Ada.Numerics;
+with Checkers; use Checkers;
 
 package body Computes is
 
@@ -8,8 +9,10 @@ package body Computes is
 
    function Compute (Pip : Cylinder; H : Humidity; P : Plant; Pum : Debit) return Time_Span
    is
+      Water : constant Volume := Compute_Water(H, P);
    begin
-      return Compute_Time(Pum, Compute_Water(H, P) + Compute_Pipe(Pip));
+      Tank_Update(Water);
+      return Compute_Time(Pum, Water + Compute_Pipe(Pip));
    end Compute;
 
    ------------------

@@ -10,5 +10,6 @@ package Checkers is
    function Humidity_Checker_After return Boolean; -- True = Error
    procedure Tank_Update (V : Volume);
    function Tank_Empty return Boolean;
+   procedure Light_Check (L : Brightness; Min : Brightness);
 
 end Checkers;

@@ -2,6 +2,7 @@ with Ada.Real_Time; use Ada.Real_Time;
 with Checkers; use Checkers;
 with Computes; use Computes;
 with Configs; use Configs;
+with Pump;
 
 package body Decisions is
 
@@ -12,6 +13,7 @@ package body Decisions is
    procedure Decision (Pip : Cylinder; H : Humidity; L : Brightness; LT : Brightness; P : Plant; Pum : Debit; Sched : Scheduler) is
       Current : Time := Clock;
       Timer : Time_Span := Time_Span_Zero;
+      B : Boolean := True;
    begin
       if not Done and not Tank_Empty then
          if Operating_Mode = Continous then
@@ -24,7 +26,9 @@ package body Decisions is
             Timer := Compute(Pip, H, P, Pum);
             Done := True;
          end if;
-         -- Call executionner
+         Humidity_Checker_Before;
+         Pump.Run(Timer);
+         B := Humidity_Checker_After;
       end if;
    end Decision;
 
