@@ -8,6 +8,7 @@ package body Computes is
    -------------
 
    function Compute (Pip : Cylinder; H : Humidity; P : Plant; Pum : Debit) return Time_Span
+     with Post => Result >= 0.0
    is
       Water : constant Volume := Compute_Water(H, P);
    begin
@@ -20,6 +21,7 @@ package body Computes is
    ------------------
 
    function Compute_Time (Pum : Debit; Water : Volume) return Time_Span
+     with Post => Result >= 0.0
    is
    begin
       return Milliseconds(Integer(Float(Water) / Float(Pum)));
