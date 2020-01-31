@@ -1,5 +1,4 @@
 with Sensors;
-with Configs;
 
 package body Logger is
 	Index : Natural := 0;
@@ -10,7 +9,7 @@ package body Logger is
 	begin
 		Light_Time := Seconds(0);
 		for E in L_Vector.First_Index .. L_Vector.Last_Index  loop
-			if L_Vector(E) > Configs.Light then
+			if L_Vector.Element(E) > Configs.Light then
 				Light_Time := Light_Time + Configs.Refresh_Time;
 			end if;
 		end loop;
@@ -32,7 +31,7 @@ package body Logger is
 			ComputeStat;
 			Last_Time := Clock;
 
-			if H_Vector.Last_Index > Seconds(86400) / Configs.Refresh_Time then
+			if H_Vector.Last_Index > Max_Values then
 				H_Vector.Delete(0);
 				L_Vector.Delete(0);
 			end if;

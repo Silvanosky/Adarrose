@@ -6,7 +6,12 @@ with STM32.User_Button;     use STM32;
 with BMP_Fonts;
 with LCD_Std_Out;
 
+with Types; use Types;
 with Sensors; use Sensors;
+with Logger;
+with Errors;
+
+with Ada.Real_Time; use Ada.Real_Time;
 
 package body Screen
 is
@@ -54,6 +59,7 @@ is
 	end Init;
 
 	procedure Print is
+		Time : Integer := 0;
 	begin
 
 		declare
@@ -71,26 +77,43 @@ is
 				end case;
 			end if;
 
-			--	   for Id in State'Range loop
-			--		   Fill_Circle
-			--			   (Display.Hidden_Buffer (1).all,
-			--			   Center => (State (Id).X, State (Id).Y),
-			--			   Radius => State (Id).Weight / 4);
-			--	   end loop;
-
-			--	   if State'Length > 0 then
-			--		   Display.Update_Layer (1, Copy_Back => True);
-			--	   end if;
 		end;
 		if Current_Mode = Board_Mode then
 			LCD_Std_Out.Put (0, 30, "Humidity: "& Sensors.H'Img & " %     ");
 			LCD_Std_Out.Put (0, 60, "Light: " & Sensors.L'Img & " %     ");
+			Time := Logger.Light_Time / Seconds(60);
+			LCD_Std_Out.Put (0, 90, "Light Time: " & Time'Img & " Min     ");
+			LCD_Std_Out.Put (0, 130, "Status: " & Errors.Message & "      ");
 
 			--Display.Update_Layer (1, Copy_Back => False);
 		else
-			Display.Hidden_Buffer (1).Set_Source (HAL.Bitmap.Green);
-			null;
+			Display.Hidden_Buffer (1).Set_Source (BG);
+			Display.Hidden_Buffer (1).Fill_Rect
+				(((0, 140), 320, 240));
 
+			Display.Hidden_Buffer (1).Set_Source (HAL.Bitmap.Blue);
+			for Id in Logger.H_Vector.First_Index .. Logger.H_Vector.Last_Index-1 loop
+				Draw_Line
+                    (Display.Hidden_Buffer (1).all,
+                     Start     => (Id * 320 / Logger.Max_Values, 240 - Integer(Logger.H_Vector.Element(Id))),
+                     Stop      => ((Id+1) * 320 / Logger.Max_Values, 240 - Integer(Logger.H_Vector.Element(Id+1))),
+                     Thickness => 1,
+                     Fast      => False);
+
+			end loop;
+
+			Display.Hidden_Buffer (1).Set_Source (HAL.Bitmap.Yellow);
+			for Id in Logger.L_Vector.First_Index .. Logger.L_Vector.Last_Index-1 loop
+				Draw_Line
+                    (Display.Hidden_Buffer (1).all,
+                     Start     => (Id * 320 / Logger.Max_Values, 240 - Integer(Logger.L_Vector.Element(Id))),
+                     Stop      => ((Id+1) * 320 / Logger.Max_Values, 240 - Integer(Logger.L_Vector.Element(Id+1))),
+                     Thickness => 1,
+                     Fast      => False);
+
+			end loop;
+
+			Display.Update_Layer (1, Copy_Back => True);
 		end if;
 
 	end Print;
