@@ -1,34 +1,3 @@
-------------------------------------------------------------------------------
---                                                                          --
---                  Copyright (C) 2016-2017, AdaCore                        --
---                                                                          --
---  Redistribution and use in source and binary forms, with or without      --
---  modification, are permitted provided that the following conditions are  --
---  met:                                                                    --
---     1. Redistributions of source code must retain the above copyright    --
---        notice, this list of conditions and the following disclaimer.     --
---     2. Redistributions in binary form must reproduce the above copyright --
---        notice, this list of conditions and the following disclaimer in   --
---        the documentation and/or other materials provided with the        --
---        distribution.                                                     --
---     3. Neither the name of the copyright holder nor the names of its     --
---        contributors may be used to endorse or promote products derived   --
---        from this software without specific prior written permission.     --
---                                                                          --
---   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS    --
---   "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT      --
---   LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR  --
---   A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT   --
---   HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, --
---   SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT       --
---   LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,  --
---   DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY  --
---   THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT    --
---   (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE  --
---   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.   --
---                                                                          --
-------------------------------------------------------------------------------
-
 --  This program demonstrates reading the analog voltage value on a GPIO
 --  pin with an ADC unit, using polling. The pin is continously polled in an
 --  infinite loop, displaying the current sample on each iteration. Connect the
@@ -47,7 +16,7 @@
 
 --  Note that you will likely need to reset the board manually after loading.
 
-with Last_Chance_Handler;  pragma Unreferenced (Last_Chance_Handler);
+--with Last_Chance_Handler;  pragma Unreferenced (Last_Chance_Handler);
 
 with STM32.Board;  use STM32.Board;
 with STM32.Device; use STM32.Device;
@@ -60,7 +29,7 @@ with LCD_Std_Out;
 
 with Ada.Real_Time;  use Ada.Real_Time;
 
-procedure Demo_ADC_GPIO_Polling is
+procedure ADC is
 
    Converter     : Analog_To_Digital_Converter renames ADC_1;
    Input_Channel : constant Analog_Input_Channel := 5;
@@ -88,7 +57,7 @@ procedure Demo_ADC_GPIO_Polling is
    procedure Print (X, Y : Natural; Value : String) is
       Trailing_Blanks : constant String := "   ";  -- to clear the rest of line
    begin
-      LCD_Std_Out.Put (X, Y, Value & " / 4095" & Trailing_Blanks);
+      LCD_Std_Out.Put (X, Y, Value & " / 100" & Trailing_Blanks);
    end Print;
 
    ----------------------------
@@ -138,10 +107,10 @@ begin
          Red_LED.Toggle;
       else
          Green_LED.Toggle;
-         Raw := UInt32 (Conversion_Value (Converter));
+         Raw := UInt32 (Conversion_Value (Converter)) * 100 / 4095;
          Print (0, 0, Raw'Img);
       end if;
 
       delay until Clock + Milliseconds (200); -- slow it down to ease reading
    end loop;
-end Demo_ADC_GPIO_Polling;
+end ADC;
