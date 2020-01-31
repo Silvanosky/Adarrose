@@ -16,7 +16,10 @@ package Errors is
      );
    Index : Natural := 1;
 
-   procedure Set_Message (I : Natural);
+   procedure Set_Message (I : Natural)
+     with Pre => Index <= 3 and Index >= 1,
+          Post => I = Index;
+
    function Get_Message return String_Access;
 
 end Errors;

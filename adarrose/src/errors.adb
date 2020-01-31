@@ -1,8 +1,7 @@
 package body Errors is
 
    procedure Set_Message (I : Natural)
-     with Pre => Index <= 3 and Index >= 1 
-          Post => I = Index
+
    is
    begin
       Index := I;
