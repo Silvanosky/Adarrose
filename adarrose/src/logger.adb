@@ -1,8 +1,6 @@
 with Sensors;
 
 package body Logger is
-	Index : Natural := 0;
-
 	Last_Time : Time := Clock;
 
 	procedure ComputeStat is
@@ -19,11 +17,6 @@ package body Logger is
 	procedure Update is
 	begin
 		if Last_Time + Configs.Refresh_Time < Clock then
-			if Index >= 23 then
-				Index := 0;
-			else
-				Index := Index + 1;
-			end if;
 
 			H_Vector.Append(Sensors.H);
 			L_Vector.Append(Sensors.L);

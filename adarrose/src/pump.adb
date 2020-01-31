@@ -23,10 +23,10 @@ package body Pump is
 
 	end Init;
 
-	procedure Run (Time : Time_Span) is
+	procedure Run (T : Time_Span) is
 	begin
 		Pin_Pump.Clear;
-		delay until Clock + Time;
+		delay until Clock + T;
 		Pin_Pump.Set;
 	end Run;
 

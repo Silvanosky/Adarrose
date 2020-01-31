@@ -4,6 +4,6 @@ with Types; use Types;
 package Pump is
 
 	procedure Init;
-	procedure Run (Time : Time_Span);
+	procedure Run (T : Time_Span);
 
 end Pump;
