@@ -44,7 +44,7 @@ package body Computes is
    
    function Compute_Pipe (Pip : Cylinder) return Volume is
    begin
-      return Volume(Pip.L * (Pip.D / 2.0) * (Pip.D / 2.0) *  Length(Pi) / 10.0);
+      return Volume(Pip.L * (Pip.D / 2.0) * (Pip.D / 2.0) *  Length(Pi) / 6.0);
    end Compute_Pipe;
 
 end Computes;
