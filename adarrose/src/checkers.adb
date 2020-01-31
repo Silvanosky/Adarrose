@@ -21,7 +21,7 @@ package body Checkers is
    is
    begin
       if Last_H >= H then
-         Set_Message("Pump was active but humidity decreased.");
+         Set_Message(1);
          return True;
       end if;
       return False;
@@ -48,7 +48,7 @@ package body Checkers is
    is
    begin
       if Tank_Current = 0.0 then
-         Set_Message("Tank is empty.");
+         Set_Message(2);
          return True;
       else
          return False;
@@ -62,7 +62,7 @@ package body Checkers is
    procedure Light_Check (L : Brightness; Min : Brightness) is
    begin
       if L /= 0 and L < Min then
-         Set_Message("Plant needs better exposure.");
+         Set_Message(3);
       end if;
    end Light_Check;
 end Checkers;
