@@ -37,9 +37,6 @@ package body Sensors is
 		   (1 => (Channel => Channel_Light, Sample_Time => Sample_144_Cycles));
 
    begin
-	   Display.Initialize;
-	   Display.Initialize_Layer (1, ARGB_8888);
-
 	   Enable_Clock (Pin_Humidity);
 	   Configure_IO (Pin_Humidity, (Mode => Mode_Analog, Resistors => Floating));
 
@@ -82,7 +79,6 @@ package body Sensors is
 
 	   Enable (ADC1);
 	   Enable (ADC2);
-	   Print (0, 0, "Ok");
 
    end Init;
 
@@ -101,13 +97,13 @@ package body Sensors is
 	   Start_Conversion (ADC1);
 	   Poll_For_Status (ADC1, Regular_Channel_Conversion_Complete, Successful);
 	   H := Humidity(100 - Positive(UInt32(Conversion_Value (ADC1)) - 2048) * 100 / 2048); -- update humidity
-	   Print (0, 0, h'Img);
+--	   Print (0, 0, h'Img);
 
 	   --Get light
 	   Start_Conversion (ADC2);
 	   Poll_For_Status (ADC2, Regular_Channel_Conversion_Complete, Successful);
 	   L := Brightness(Positive(UInt32(Conversion_Value (ADC2)) * 100 / 4095)); -- update light
-	   Print (0, 50, l'Img);
+--	   Print (0, 50, l'Img);
 
    end Update;
 
