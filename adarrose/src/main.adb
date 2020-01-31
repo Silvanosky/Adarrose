@@ -1,11 +1,12 @@
+with Checkers; use Checkers;
+with Computes; use Computes;
 with Configs; use Configs;
 with Decisions; use Decisions;
 With Errors; use Errors;
-with Plants; use Plants;
-with Sensors; use Sensors;
 with Pump; use Pump;
-with Types; use Types;
 with Screen; use Screen;
+with Sensors; use Sensors;
+with Types; use Types;
 
 with Ada.Real_Time; use Ada.Real_Time;
 

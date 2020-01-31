@@ -1,25 +1,38 @@
 with Errors; use Errors;
-with Configs; use Configs;
+with Sensors; use Sensors;
 
 package body Checkers is
 
-   ----------------------
-   -- Humidity_Checker --
-   ----------------------
+   -----------------------------
+   -- Humidity_Checker_Before --
+   -----------------------------
 
-   function Humidity_Checker return Boolean is
+   procedure Humidity_Checker_Before is
    begin
-      if not Init_H then
-         Init_H := True;
          Last_H := H;
-         return False;
-      end if;
-      if P and Last_H > H then
-         Set_Message("Punp active but humidity decreasing");
+   end Humidity_Checker_Before;
+
+   ----------------------------
+   -- Humidity_Checker_After --
+   ----------------------------
+
+   function Humidity_Checker_After return Boolean is
+   begin
+      if Last_H >= H then
+         Set_Message("Pump was active but hummidity decreased.");
          return True;
       end if;
       return False;
-   end Humidity_Checker;
+   end Humidity_Checker_After;
+
+   ----------------
+   -- Tank_Update --
+   ----------------
+
+   procedure Tank_Update (V : Volume) is
+   begin
+      Tank_Current := Tank_Current - V;
+   end Tank_Update;
 
    ----------------
    -- Tank_Empty --
@@ -27,7 +40,7 @@ package body Checkers is
 
    function Tank_Empty return Boolean is
    begin
-      if False then
+      if Tank_Current = 0 then
          Set_Message("Tank is empty");
          return True;
       else

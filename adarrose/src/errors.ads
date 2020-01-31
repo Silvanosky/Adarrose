@@ -1,6 +1,6 @@
 package Errors is
 
-   Message : String := "";
+   Message : String := "Good";
 
    procedure Set_Message (str : String);
 
