@@ -47,7 +47,7 @@ package body Checkers is
      --with Post => Result = (Tank_Current = 0)
    is
    begin
-      if Tank_Current = 0 then
+      if Tank_Current = 0.0 then
          Set_Message("Tank is empty.");
          return True;
       else
@@ -61,7 +61,7 @@ package body Checkers is
 
    procedure Light_Check (L : Brightness; Min : Brightness) is
    begin
-      if L /= 0 and L < Min then
+      if L /= 0.0 and L < Min then
          Set_Message("Plant needs better exposure.");
       end if;
    end Light_Check;

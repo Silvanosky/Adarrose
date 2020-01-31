@@ -31,10 +31,10 @@ package body Computes is
 
    function Compute_Water (H : Humidity; P : Plant) return Volume is
    begin
-      if P.Threshold <= h then
-         return 0;
+      if P.Threshold <= H then
+         return 0.0;
       else
-         return Volume(Natural(P.Container) * Natural(P.Threshold - H) / 200);
+         return Volume(Float(P.Container) * Float(P.Threshold - H) / 200.0);
       end if;
    end Compute_Water;
    
@@ -44,7 +44,7 @@ package body Computes is
    
    function Compute_Pipe (Pip : Cylinder) return Volume is
    begin
-      return Volume(Pip.L * (Pip.D / 2) * (Pip.D / 2) *  Length(Pi) / 10);
+      return Volume(Pip.L * (Pip.D / 2.0) * (Pip.D / 2.0) *  Length(Pi) / 10.0);
    end Compute_Pipe;
 
 end Computes;

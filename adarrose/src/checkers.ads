@@ -4,7 +4,7 @@ package Checkers is
 
    Init_H : Boolean := False;
    Last_H : Humidity;
-   Tank_Current : Volume := 100;
+   Tank_Current : Volume := 100.0;
 
    procedure Humidity_Checker_Before;
    function Humidity_Checker_After return Boolean; -- True = Error

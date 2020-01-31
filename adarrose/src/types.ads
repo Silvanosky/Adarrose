@@ -2,11 +2,11 @@ with Ada.Real_Time; use Ada.Real_Time;
 
 package Types is
 
-   type Humidity is new Natural range 0 .. 100; -- Humidity percentage
-   type Brightness is new Natural range 0 .. 100; -- Brightness percentage
-   type Volume is new Natural; -- Volume in milliliter (cl)
-   type Length is new Natural; -- Length in centimeter (cm)
-   type Debit is new Natural; -- Debit in milliliter per milliseconds (cl/ms)
+   type Humidity is new Float range 0.0 .. 100.0; -- Humidity percentage
+   type Brightness is new Float range 0.0 .. 100.0; -- Brightness percentage
+   type Volume is new Float range 0.0 .. Float'Last; -- Volume in milliliter (cl)
+   type Length is new Float range 0.0 .. Float'Last; -- Length in centimeter (cm)
+   type Debit is new Float range 0.0 .. Float'Last; -- Debit in milliliter per milliseconds (cl/ms)
    type Mode is (Continous, Economy, Scheduled, Punctual); -- Operating mode
    type Scheduler is record Start : Time; Stop : Time; end record; -- Time scheduler
    type Cylinder is record L : Length; D : Length; end record; -- Cylinder
