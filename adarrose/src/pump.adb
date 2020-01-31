@@ -7,7 +7,7 @@ with System;        use System;
 
 package body Pump is
 
-	Pin_Pump  : GPIO_Point renames PD12;
+	Pin_Pump  : GPIO_Point renames PD13;
 
 	procedure Init is
 	begin
@@ -16,7 +16,7 @@ package body Pump is
 		Configure_IO
 			(Pin_Pump,
 			(Mode        => Mode_Out,
-			Output_Type => Open_Drain,
+			Output_Type => Push_Pull,
 			Speed       => Speed_100MHz,
 			Resistors   => Floating));
 		Set(Pin_Pump);
