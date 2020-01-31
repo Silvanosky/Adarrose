@@ -3,8 +3,8 @@ package Errors is
    type String_Access is access constant String;
 
    Message_1 : aliased constant String := "I am Groot.";
-   Message_2 : aliased constant String := "No Humidity Increase.";
-   Message_3 : aliased constant String := "Plants need water.";
+   Message_2 : aliased constant String := "Humidity doesn't increase.";
+   Message_3 : aliased constant String := "Plants needs water.";
    Message_4 : aliased constant String := "Please more light.";
 
    Message : Array (1 .. 4) of String_Access :=
