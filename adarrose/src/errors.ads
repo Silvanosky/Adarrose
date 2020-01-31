@@ -1,5 +1,7 @@
 package Errors is
 
-   function Tank_Empty return Boolean;
+   Message : String := "";
+
+   procedure Set_Message (str : String);
 
 end Errors;

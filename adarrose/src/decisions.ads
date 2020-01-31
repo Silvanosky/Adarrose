@@ -8,5 +8,6 @@ package Decisions is
    function Make_Decision (H : Humidity) return Time_Span;
    function Compute_Time(Water : Volume) return Time_Span;
    function Compute_Water (P : Plant; h : Humidity) return Volume;
+   function Compute_Pipe return Volume;
 
 end Decisions;

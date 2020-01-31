@@ -11,5 +11,8 @@ package Configs is
    Bastle : Boolean := True;
    Schedule : Scheduler;-- := (Start => 12, Stop => 16);
    Day_Time : Scheduler;-- := (Start => 8, Stop => 20);
+   Pipe : Cylinder := (L => Length(10), D => Length(1));
+   P : Boolean := False;
+   H : Humidity;
 
 end Configs;

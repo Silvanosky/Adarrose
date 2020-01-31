@@ -1,14 +1,8 @@
 package body Errors is
 
-   ----------------
-   -- Tank_Empty --
-   ----------------
-
-   function Tank_Empty return Boolean is
+   procedure Set_Message (str : String) is
    begin
-      return False;
-   end Tank_Empty;
-
-   
+      Message := str;
+   end Set_Message;
 
 end Errors;
