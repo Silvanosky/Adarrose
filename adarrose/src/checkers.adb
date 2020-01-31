@@ -61,7 +61,7 @@ package body Checkers is
 
    procedure Light_Check (L : Brightness; Min : Brightness) is
    begin
-      if L /= 0.0 and L < Min then
+      if L /= 0 and L < Min then
          Set_Message("Plant needs better exposure.");
       end if;
    end Light_Check;
