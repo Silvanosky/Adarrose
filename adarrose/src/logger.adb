@@ -1,19 +1,17 @@
 with Sensors;
 with Configs;
 
-with Ada.Real_Time; use Ada.Real_Time;
-
 package body Logger is
 	Index : Natural := 0;
 
-	Last_Time : Time_Span := Clock;
+	Last_Time : Time := Clock;
 
 	procedure ComputeStat is
 	begin
-		Light_Time := 0;
-		for E of L_Vector loop
+		Light_Time := Seconds(0);
+		for E in L_Vector.First_Index .. L_Vector.Last_Index  loop
 			if L_Vector(E) > Configs.Light then
-				Light_Time := Light_Time + Configs.Refresh_Time
+				Light_Time := Light_Time + Configs.Refresh_Time;
 			end if;
 		end loop;
 
