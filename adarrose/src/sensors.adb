@@ -100,13 +100,13 @@ package body Sensors is
        --Get Humidity sensor
 	   Start_Conversion (ADC1);
 	   Poll_For_Status (ADC1, Regular_Channel_Conversion_Complete, Successful);
-	   h := Humidity(100 - Positive(UInt32(Conversion_Value (ADC1)) - 2048) * 100 / 2048); -- update humidity
+	   H := Humidity(100 - Positive(UInt32(Conversion_Value (ADC1)) - 2048) * 100 / 2048); -- update humidity
 	   Print (0, 0, h'Img);
 
 	   --Get light
 	   Start_Conversion (ADC2);
 	   Poll_For_Status (ADC2, Regular_Channel_Conversion_Complete, Successful);
-	   l := Brightness(Positive(UInt32(Conversion_Value (ADC2)) * 100 / 4095)); -- update light
+	   L := Brightness(Positive(UInt32(Conversion_Value (ADC2)) * 100 / 4095)); -- update light
 	   Print (0, 50, l'Img);
 
    end Update;
