@@ -1,5 +1,3 @@
-with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
-
 package Errors is
 
    type String_Access is access constant String;

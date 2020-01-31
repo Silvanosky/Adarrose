@@ -29,7 +29,9 @@ package body Computes is
    -- Compute_Water --
    -------------------
 
-   function Compute_Water (H : Humidity; P : Plant) return Volume is
+   function Compute_Water (H : Humidity; P : Plant) return Volume
+     with Pre => H <= 100 and H >= 0
+   is
    begin
       if P.Threshold <= H then
          return 0.0;
@@ -42,7 +44,10 @@ package body Computes is
    -- Compute_Pipe --
    ------------------
    
-   function Compute_Pipe (Pip : Cylinder) return Volume is
+   function Compute_Pipe (Pip : Cylinder) return Volume
+     with Pre => Pip.L <= Float'Last and Pip.L >= 0.0 and Pip.D <= Float'Last and Pip.D >= 0.0
+          Post => Result >= 0.0
+   is
    begin
       return Volume(Pip.L * (Pip.D / 2.0) * (Pip.D / 2.0) *  Length(Pi) / 6.0);
    end Compute_Pipe;

@@ -17,7 +17,7 @@ package body Checkers is
    ----------------------------
 
    function Humidity_Checker_After return Boolean
-     --with Pre => Last_H <= 100 and Last_H >= 0 and H <= 100 and H >= 0
+     with Pre => Last_H <= 100 and Last_H >= 0 and H <= 100 and H >= 0
    is
    begin
       if Last_H >= H then
@@ -32,8 +32,8 @@ package body Checkers is
    ----------------
 
    procedure Tank_Update (V : Volume)
-     --with Pre => Tank_Current <= Tank and V <= Tank and Tank_Current >= V,
-     --     Post => Tank_Current'Old <= Tank_Current
+     with Pre => Tank_Current <= Tank and V <= Tank and Tank_Current >= V,
+          Post => Tank_Current'Old <= Tank_Current
    is
    begin
       Tank_Current := Tank_Current - V;
@@ -44,7 +44,7 @@ package body Checkers is
    ----------------
 
    function Tank_Empty return Boolean
-     --with Post => Result = (Tank_Current = 0)
+     with Post => Result = (Tank_Current = 0)
    is
    begin
       if Tank_Current = 0.0 then
@@ -59,7 +59,9 @@ package body Checkers is
    -- Light_Check --
    -----------------
 
-   procedure Light_Check (L : Brightness; Min : Brightness) is
+   procedure Light_Check (L : Brightness; Min : Brightness)
+     with Pre => L <= 100 and L >= 0 and Min <= 100 and Min >= 0
+   is
    begin
       if L /= 0 and L < Min then
          Set_Message(4);
