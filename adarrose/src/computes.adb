@@ -22,7 +22,7 @@ package body Computes is
    function Compute_Time (Pum : Debit; Water : Volume) return Time_Span
    is
    begin
-      return Milliseconds(Natural(Water) / Natural(Pum));
+      return Milliseconds(Integer(Float(Water) / Float(Pum)));
    end Compute_Time;
 
    -------------------
@@ -34,7 +34,7 @@ package body Computes is
       if P.Threshold <= H then
          return 0.0;
       else
-         return Volume(Float(P.Container) * Float(P.Threshold - H) / 200.0);
+         return Volume(Float(P.Container) * Float(P.Threshold - H));
       end if;
    end Compute_Water;
    
