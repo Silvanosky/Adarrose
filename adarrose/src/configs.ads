@@ -3,7 +3,7 @@ with Types; use Types;
 
 package Configs is
 
-   Refresh_Time : constant Time_Span := Seconds(3600);
+   Refresh_Time : constant Time_Span := Seconds(5);
    Tank : constant Volume := 80.0;
    Plant_Pot : constant Plant := (Container => 0.2, Threshold => 75);
    Plant_Consumption : constant Humidity := 5; -- Humidity per hour;
